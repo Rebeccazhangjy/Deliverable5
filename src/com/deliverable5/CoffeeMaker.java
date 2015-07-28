@@ -2,6 +2,9 @@ package com.deliverable5;
 
 import java.util.Scanner;
 
+/*
+ * Coffee Maker Quest 2.0
+*/
 
 /*
  * We removed the Game class and put those methods here, because we found that the Game class is not very necessary.
