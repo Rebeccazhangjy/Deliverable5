@@ -14,7 +14,7 @@ import junit.framework.TestCase;
 
 public class CoffeeMakerTest {
 
-	// the next 6 tests test the doSomething() method
+	// the next 9 tests test the doSomething() method
 
 	// make sure moveNorth is called and 2 is returned so the game continues
 	@Test

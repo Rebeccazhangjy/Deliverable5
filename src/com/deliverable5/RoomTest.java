@@ -6,7 +6,44 @@ import org.junit.Test;
 
 public class RoomTest {
 
-	// Test hasSugar()
+	
+	// The next 2 tests test hasCoffee()
+	
+	// hasCoffee() should return false when there's no coffee in the room
+	@Test
+	public void testHasNoCoffee() {
+		Room room = new Room(false, false, false, true, true);
+		assertFalse(room.hasCoffee());
+	}
+	
+	// hasCoffee() should return true when there's coffee in the room
+	@Test
+	public void testHasCoffee() {
+		Room room = new Room(true, false, false, true, true);
+		assertTrue(room.hasCoffee());
+	}
+	
+	
+	
+	// The next 2 tests test hasCream()
+	
+		// hasCream() should return false when there's no cream in the room
+		@Test
+		public void testHasNoCream() {
+			Room room = new Room(false, false, false, true, true);
+			assertFalse(room.hasCream());
+		}
+		
+		// hasCream() should return true when there's cream in the room
+		@Test
+		public void testHasCream() {
+			Room room = new Room(false, true, false, true, true);
+			assertTrue(room.hasCream());
+		}
+
+		
+	
+	// The next 2 tests test hasSugar()
 	
 	// hasSugar() should return false when there's no sugar in the room
 	@Test
@@ -22,38 +59,9 @@ public class RoomTest {
 		assertTrue(room.hasSugar());
 	}
 
-	// Test hasCream()
 	
-	// hasCream() should return false when there's no cream in the room
-	@Test
-	public void testHasNoCream() {
-		Room room = new Room(false, false, false, true, true);
-		assertFalse(room.hasCream());
-	}
 	
-	// hasCream() should return true when there's cream in the room
-	@Test
-	public void testHasCream() {
-		Room room = new Room(false, true, false, true, true);
-		assertTrue(room.hasCream());
-	}
-
-	// Test hasCoffee()
 	
-	// hasCoffee() should return false when there's no coffee in the room
-	@Test
-	public void testHasNoCoffee() {
-		Room room = new Room(false, false, false, true, true);
-		assertFalse(room.hasCoffee());
-	}
-	
-	// hasCoffee() should return true when there's coffee in the room
-	@Test
-	public void testHasCoffee() {
-		Room room = new Room(true, false, false, true, true);
-		assertTrue(room.hasCoffee());
-	}
-
 	
 	// The next 8 tests test the hasItem() method
 
@@ -122,7 +130,8 @@ public class RoomTest {
 
 	
 	
-	// Test northExit()
+	// The next 2 tests test northExit()
+	
 	// northExit() should return true when there exists a north exit
 	@Test
 	public void testNorthExit() {
@@ -137,7 +146,10 @@ public class RoomTest {
 		assertFalse(room.northExit());
 	}
 
-	// Test southExit()
+	
+	
+	// The next 2 tests test southExit()
+	
 	// southExit() should return true when there exists a south exit
 	@Test
 	public void testSouthExit() {
@@ -145,7 +157,6 @@ public class RoomTest {
 		assertTrue(room.southExit());
 	}
 	
-	// Test southExit()
 	// southExit() should return false when there's no south exit
 	@Test
 	public void testNoSouthExit() {
