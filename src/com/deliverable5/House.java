@@ -24,15 +24,11 @@ public class House {
  * We have fixed the magical land defect so we don't need the check part.
  * Additionally, for easy use purpose, we added room number for each room.
  * 
+ * 
 */	
 	public String getCurrentRoomInfo() {
-//		if (_currentRoom < 0 || _currentRoom >= _numRooms) {
-//			_currentRoom = 0;
-//			return "You are in a magical land!  But you are returned to the beginning!";
-//		} else {
 		System.out.println("\nYou are in Room " + (_currentRoom + 1) + "."); 
 		return _rooms[_currentRoom].getDescription();
-//		}
 	}
 	
 	
@@ -41,7 +37,9 @@ public class House {
  * 
  * In the next two methods, we added an if statement in order to make sure the player cannot move north
  * or south if there's no exit towards that direction.
+ * 
 */	
+	
 	public void moveNorth() {
 		if (_rooms[_currentRoom].northExit()){
 			_currentRoom += 1;
@@ -85,6 +83,7 @@ public class House {
 	/*
 	 * We didn't make any changes to the code in this method, just made it more clear to read.
 	 */
+	
 	public Room[] generateRooms(int numRooms) {
 				
 		Room[] toReturn = new Room[numRooms];

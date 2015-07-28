@@ -9,6 +9,7 @@ import java.util.Scanner;
 /*
  * We removed the Game class and put those methods here, because we found that the Game class is not very necessary.
  * Its methods don't use multiple times but only once in the CoffeeMaker class, so we did this.
+ * 
 */
 
 public class CoffeeMaker {
@@ -123,18 +124,13 @@ public class CoffeeMaker {
 
 	
 	/*
-	 * REMOVED
+	 * REMOVED public int runArgs(String arg) {}
 	 * 
 	 * We removed this method and moved the statement to the main method at the beginning of the program
 	 * as the instructions for the game.
+	 * 
 	 */
 	
-//	public int runArgs(String arg) {
-//		System.out.println("Instructions for Coffee Maker Quest - ");
-//		System.out.println("You are a brave student trying to study for finals, but you need caffeine.");
-//		System.out.println("The goal of the game is to collect sugar, coffee, and cream so that you can study.");
-//		return 0;
-//	}
 	
 	/*
 	 * REFACTORED
@@ -151,15 +147,11 @@ public class CoffeeMaker {
 		
 		int returnValue = 0;
 		
-//		if (args.length == 0) {
-			Player p = new Player();
-			House h = new House(6);
-			CoffeeMaker cm = new CoffeeMaker(p, h); // We moved the CoffeeMaker constructor after the Player and the House.
-//			Game g = new Game(p, h);              // As we removed the Game class, we also removed the parameter of Game.
-			returnValue = cm.runGameLoop(p, h);   // The original statement was returnValue = cm.runGameLoop(p, h, g);	 
-//		} else {
-//			returnValue = cm.runArgs(args[0]);
-//		}
+		Player p = new Player();
+		House h = new House(6);
+		CoffeeMaker cm = new CoffeeMaker(p, h); // We moved the CoffeeMaker constructor after the Player and the House.
+												// As we removed the Game class, we also removed the parameter of Game.
+		returnValue = cm.runGameLoop(p, h);     // The original statement was returnValue = cm.runGameLoop(p, h, g);	 
 		
 		System.out.println("Exiting with error code " + returnValue);
 	}

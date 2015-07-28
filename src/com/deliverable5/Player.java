@@ -56,7 +56,9 @@ public class Player {
 	 * REFACTORED
 	 * 
 	 * Changed the first condition to the existing method
+	 * 
 	 */
+	
 	public boolean drink() {
 		boolean win = false;
 		

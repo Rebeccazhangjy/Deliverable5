@@ -38,6 +38,7 @@ public class Room {
 	
 	/*
 	 * We didn't make any changes to the code, just made it more clear to read.
+	 * 
 	 */
 	
 	private String getAdjective() {
@@ -81,6 +82,7 @@ public class Room {
 	
 	/*
 	 * We didn't make any changes to the code, just made it more clear to read.
+	 * 
 	 */
 	
 	private String getNoun() {
@@ -96,6 +98,7 @@ public class Room {
 	
 	/*
 	 * We didn't make any changes to the code, just made it more clear to read.
+	 * 
 	 */
 	
 	private String generateDescription() {
